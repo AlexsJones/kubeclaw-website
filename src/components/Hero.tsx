@@ -139,16 +139,7 @@ export default function Hero() {
               </div>
               <div className="text-slate-400">
                 <span className="text-claw-green">$</span>{' '}
-                <span className="text-white">kubeclaw onboard</span>
-              </div>
-              <div className="text-claw-purple mt-1">
-                ╔═══════════════════════════════════════════╗
-              </div>
-              <div className="text-claw-purple">
-                ║{'     '}KubeClaw · Onboarding Wizard{'        '}║
-              </div>
-              <div className="text-claw-purple">
-                ╚═══════════════════════════════════════════╝
+                <span className="text-white">kubeclaw</span>
               </div>
               <div className="mt-1 text-slate-500">
                 <span className="animate-pulse text-claw-orange">▊</span>
