@@ -29,26 +29,22 @@ export default function Hero() {
         </svg>
       </div>
 
-      {/* Side banner – "From the creator of k8sgpt" */}
-      <a
-        href="https://k8sgpt.ai"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed top-28 right-0 z-50 group"
-      >
+      {/* Side banner – "From the creator of k8sgpt & llmfit" */}
+      <div className="fixed top-28 right-0 z-50">
         <div className="flex items-center gap-2 pl-4 pr-3 py-2.5 rounded-l-full bg-white/5 border border-r-0 border-white/10 backdrop-blur-md shadow-lg shadow-black/20 translate-x-1 hover:translate-x-0 transition-transform duration-300">
           <span className="w-2 h-2 bg-claw-green rounded-full animate-pulse" />
           <span className="text-xs font-medium text-slate-300 whitespace-nowrap">
             From the creator of{' '}
-            <span className="text-kube-blue group-hover:text-primary-light transition-colors font-semibold">
+            <a href="https://k8sgpt.ai" target="_blank" rel="noopener noreferrer" className="text-kube-blue hover:text-primary-light transition-colors font-semibold">
               k8sgpt
-            </span>
+            </a>
+            {' & '}
+            <a href="https://github.com/AlexsJones/llmfit" target="_blank" rel="noopener noreferrer" className="text-claw-purple hover:text-claw-orange transition-colors font-semibold">
+              llmfit
+            </a>
           </span>
-          <svg className="w-3.5 h-3.5 text-slate-500 group-hover:text-kube-blue transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-          </svg>
         </div>
-      </a>
+      </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24">
         {/* Main headline */}
