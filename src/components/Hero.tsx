@@ -29,24 +29,24 @@ export default function Hero() {
         </svg>
       </div>
 
-      {/* Side banner – "From the creator of k8sgpt & llmfit" */}
-      <div className="fixed top-28 right-0 z-50">
-        <div className="flex items-center gap-2 pl-4 pr-3 py-2.5 rounded-l-full bg-white/5 border border-r-0 border-white/10 backdrop-blur-md shadow-lg shadow-black/20 translate-x-1 hover:translate-x-0 transition-transform duration-300">
-          <span className="w-2 h-2 bg-claw-green rounded-full animate-pulse" />
-          <span className="text-xs font-medium text-slate-300 whitespace-nowrap">
-            From the creator of{' '}
-            <a href="https://k8sgpt.ai" target="_blank" rel="noopener noreferrer" className="text-kube-blue hover:text-primary-light transition-colors font-semibold">
-              k8sgpt
-            </a>
-            {' & '}
-            <a href="https://github.com/AlexsJones/llmfit" target="_blank" rel="noopener noreferrer" className="text-claw-purple hover:text-claw-orange transition-colors font-semibold">
-              llmfit
-            </a>
-          </span>
-        </div>
-      </div>
-
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24">
+        {/* Creator badge */}
+        <div className="flex justify-center mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
+            <span className="w-2 h-2 bg-claw-green rounded-full animate-pulse" />
+            <span className="text-sm font-medium text-slate-300">
+              From the creator of{' '}
+              <a href="https://k8sgpt.ai" target="_blank" rel="noopener noreferrer" className="text-kube-blue hover:text-primary-light transition-colors font-semibold">
+                k8sgpt
+              </a>
+              {' & '}
+              <a href="https://github.com/AlexsJones/llmfit" target="_blank" rel="noopener noreferrer" className="text-claw-purple hover:text-claw-orange transition-colors font-semibold">
+                llmfit
+              </a>
+            </span>
+          </div>
+        </div>
+
         {/* Main headline */}
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.9] mb-6">
           <span className="text-white">The </span>
