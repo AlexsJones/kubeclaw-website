@@ -36,9 +36,9 @@ const features = [
     title: 'Isolated Skill Sidecars',
     subtitle: 'A game-changer',
     description:
-      'Every skill runs in its own sidecar container — a separate, isolated process injected into the agent pod at runtime. Toggle a skill on, and the controller automatically injects a dedicated sidecar, provisions ephemeral least-privilege RBAC, shares a /workspace volume, and garbage-collects everything when the run finishes.',
+      'Every skill runs in its own sidecar container — a separate, isolated process injected into the agent pod at runtime. Use skills to give agents cluster-admin capabilities (kubectl, Helm, scaling) or domain-specific tools — each with ephemeral least-privilege RBAC that\'s garbage-collected when the run finishes.',
     highlights: [
-      'Dedicated sidecar container per skill',
+      'Cluster ops skills: kubectl, Helm, scaling',
       'Ephemeral, least-privilege RBAC per run',
       'Shared /workspace volume coordination',
       'Automatic cleanup — containers, roles, bindings',
@@ -88,12 +88,12 @@ const features = [
   },
   {
     title: 'Scheduled Heartbeats',
-    subtitle: 'Proactive automation',
+    subtitle: 'Proactive cluster & task automation',
     description:
-      'ClawSchedule CRDs define cron-based recurring agent runs — the Kubernetes-native equivalent of heartbeat systems. Concurrency policies (Forbid, Allow, Replace) work like CronJob — a natural extension of K8s semantics.',
+      'ClawSchedule CRDs define cron-based recurring agent runs — perfect for automated cluster health checks, overnight alert reviews, resource right-sizing sweeps, or any domain-specific task. Concurrency policies (Forbid, Allow, Replace) work like CronJob.',
     highlights: [
-      'Cron-based recurring runs',
-      'Built-in concurrency controls',
+      'Automated cluster health sweeps',
+      'Alert triage & remediation on schedule',
       'Memory injection per schedule',
       'CronJob-style semantics',
     ],
@@ -164,9 +164,13 @@ export default function Features() {
             Everything you need for
             <br />
             <span className="bg-gradient-to-r from-primary to-claw-cyan bg-clip-text text-transparent">
-              production-grade agentic AI
+              agent fleets & agentic cluster ops
             </span>
           </h2>
+          <p className="text-lg text-slate-400 max-w-3xl mx-auto">
+            Deploy multi-agent workflows for any domain — or point agents at your cluster itself
+            to diagnose issues, scale workloads, and respond to alerts. All with Kubernetes-native safety.
+          </p>
         </div>
 
         {/* Feature cards */}

@@ -29,7 +29,7 @@ const reasons = [
     ),
     title: 'True Multi-Agent',
     description:
-      'Not just multiple tools in one process. Each agent gets its own pod, its own RBAC, its own network policy. Run dozens of agents concurrently with proper tenant isolation.',
+      'Not just multiple tools in one process. Each agent gets its own pod, its own RBAC, its own network policy. Run dozens of agents concurrently — handling external tasks or managing cluster resources — with proper tenant isolation.',
     color: 'from-claw-purple to-primary',
   },
   {
@@ -49,9 +49,9 @@ const reasons = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11.42 15.17l-5.384 3.181 1.028-5.993L2.114 7.63l6.016-.874L11.42 1.5l2.692 5.256 6.016.874-4.95 4.728 1.028 5.993z" />
       </svg>
     ),
-    title: 'Skill Sidecars',
+    title: 'Cluster-Aware Skills',
     description:
-      'Every skill runs in its own sidecar container with auto-provisioned, least-privilege RBAC. Toggle skills on and off per instance. No plugins to install — just Kubernetes-native isolation.',
+      'Equip agents with kubectl, Helm, and custom cluster-ops skills — each in its own sidecar with auto-provisioned, least-privilege RBAC. Agents can inspect pods, scale deployments, or run domain-specific tools — safely and ephemerally.',
     color: 'from-primary to-claw-purple',
   },
   {
@@ -63,7 +63,7 @@ const reasons = [
     ),
     title: 'Full Observability',
     description:
-      'kubectl logs, events, conditions, k9s-style TUI. Everything is a Kubernetes resource — declarative, reconcilable, observable.',
+      'kubectl logs, events, conditions, k9s-style TUI. Whether agents are processing external tasks or managing cluster resources, every action is a Kubernetes resource — declarative, reconcilable, observable.',
     color: 'from-claw-cyan to-kube-blue',
   },
 ]
@@ -83,16 +83,18 @@ export default function WhyKubeClaw() {
             Why KubeClaw?
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            OpenClaw pioneered the vision.
+            Two powerful use cases.
             <br />
             <span className="bg-gradient-to-r from-kube-blue to-claw-purple bg-clip-text text-transparent">
-              KubeClaw makes it cloud-native.
+              One Kubernetes-native platform.
             </span>
           </h2>
           <p className="text-lg text-slate-400 max-w-3xl mx-auto">
-            Agentic frameworks that run as in-process monoliths with file-based state and single-instance 
-            locks can't scale. KubeClaw rebuilds the entire model on Kubernetes primitives — 
-            declarative, reconcilable, observable, and infinitely scalable.
+            Use KubeClaw to <span className="text-claw-orange font-medium">orchestrate fleets of AI agents</span> for
+            any workload — customer support, code review, data pipelines. Or point those agents
+            inward to <span className="text-kube-blue font-medium">administer the cluster itself</span>: diagnose
+            failures, scale deployments, triage alerts, and remediate issues — all with Kubernetes-native
+            isolation, RBAC, and audit trails.
           </p>
         </div>
 
@@ -123,8 +125,9 @@ export default function WhyKubeClaw() {
           <blockquote className="relative">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 text-6xl text-claw-purple/20 font-serif">"</div>
             <p className="text-xl italic text-slate-300 leading-relaxed pt-8">
-              Give the agent tools, not trust. Skills get exactly the permissions they declare, 
-              for exactly as long as the run lasts, and not a second longer.
+              Give the agent tools, not trust. Whether it's orchestrating a fleet or administering
+              the cluster, skills get exactly the permissions they declare, for exactly as long as
+              the run lasts, and not a second longer.
             </p>
           </blockquote>
         </div>

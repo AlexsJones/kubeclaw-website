@@ -62,12 +62,8 @@ export default function Hero() {
 
         {/* Sub-headline */}
         <p className="text-xl sm:text-2xl md:text-3xl text-slate-300 font-light max-w-4xl mx-auto mb-4 leading-relaxed">
-          What{' '}
-          <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" className="text-claw-orange hover:text-accent-light transition-colors font-medium">
-            OpenClaw
-          </a>{' '}
-          does in-process,{' '}
-          <span className="text-white font-semibold">KubeClaw</span> does with Kubernetes primitives.
+          Run a <span className="text-claw-orange font-medium">fleet of AI agents</span> on Kubernetes.{' '}
+          <span className="text-kube-blue font-medium">Administer your cluster</span> agentically.
         </p>
 
         <p className="text-lg text-slate-400 max-w-3xl mx-auto mb-10">
@@ -75,7 +71,9 @@ export default function Hero() {
           Every policy is a <span className="text-claw-purple font-medium">CRD</span>. 
           Every execution is a <span className="text-claw-green font-medium">Job</span>.
           <br className="hidden sm:block" />
-          Multi-tenant. Multi-agent. Horizontally scalable. <span className="text-white font-semibold">Safe by design.</span>
+          Orchestrate multi-agent workflows <em>and</em> let agents diagnose, scale, and remediate your infrastructure.
+          <br className="hidden sm:block" />
+          Multi-tenant. Horizontally scalable. <span className="text-white font-semibold">Safe by design.</span>
         </p>
 
         {/* CTA Buttons */}

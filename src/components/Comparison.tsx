@@ -86,7 +86,7 @@ export default function Comparison() {
           </h2>
           <p className="text-lg text-slate-400 max-w-3xl mx-auto">
             OpenClaw pioneered agentic orchestration. KubeClaw takes every concept and 
-            expresses it as a Kubernetes-native resource — declarative, reconcilable, and infinitely scalable.
+            expresses it as a Kubernetes-native resource — then adds the ability to point agents at the cluster itself.
           </p>
         </div>
 

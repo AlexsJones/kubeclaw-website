@@ -143,7 +143,8 @@ export default function Architecture() {
           </h2>
           <p className="text-lg text-slate-400 max-w-3xl mx-auto">
             Every concept that OpenClaw manages in application code, KubeClaw expresses as a
-            Kubernetes resource — declarative, reconcilable, observable, and scalable.
+            Kubernetes resource. The same architecture powers both agent fleet orchestration
+            and agentic cluster administration.
           </p>
         </div>
 
