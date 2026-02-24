@@ -158,9 +158,21 @@ export default function Hero() {
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Scroll indicator */}
+        {/* TUI screenshot */}
+        <div className="max-w-4xl mx-auto mt-12">
+          <div className="rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40">
+            <img
+              src="/tui.png"
+              alt="KubeClaw interactive TUI — k9s-style cluster management"
+              className="w-full h-auto"
+            />
+          </div>
+          <p className="mt-4 text-sm text-slate-500 font-mono text-center">
+            The k9s-style interactive TUI — manage instances, runs, skills, and channels from your terminal
+          </p>
+        </div>
+      </div>
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500">
         <span className="text-xs font-medium tracking-widest uppercase">Scroll</span>
         <svg className="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
