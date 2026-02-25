@@ -67,16 +67,15 @@ export default function WhoItsFor() {
             Who It's For
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            One agent per concern.
+            Run agents for your cluster.
             <br />
             <span className="bg-gradient-to-r from-claw-orange to-claw-purple bg-clip-text text-transparent">
-              A fleet for the whole cluster.
+              Serve agents to your users.
             </span>
           </h2>
           <p className="text-lg text-slate-400 max-w-3xl mx-auto">
-            Cluster operators deploy <span className="text-white font-medium">purpose-built agent personas</span> — each with its own skills, policy, and heartbeat.
-            Run one for on-call, another for security, a third for platform engineering.
-            <span className="text-claw-orange font-medium"> Compose them into a fleet</span> that covers your entire operational surface.
+            <span className="text-white font-medium">Cluster operators</span> deploy purpose-built agent personas — SRE, security, platform eng — each with its own skills, policy, and heartbeat.
+            <span className="text-claw-orange font-medium">Platform teams</span> use KubeClaw to host agentic workloads that other teams and end-users interact with through Slack, Telegram, Discord, or API — with full tenant isolation, RBAC, and audit trails baked in.
           </p>
         </div>
 
@@ -124,33 +123,46 @@ export default function WhoItsFor() {
           ))}
         </div>
 
-        {/* Fleet callout */}
-        <div className="mt-16 relative rounded-2xl border border-white/5 bg-surface-light/30 p-8 sm:p-12 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-claw-purple/5 via-transparent to-claw-orange/5" />
-          <div className="relative flex flex-col md:flex-row items-center gap-8">
-            {/* Fleet icon */}
-            <div className="shrink-0">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-claw-purple to-claw-orange p-[1px]">
-                <div className="w-full h-full rounded-2xl bg-surface-light flex items-center justify-center">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        {/* Two callout panels */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Fleet operator callout */}
+          <div className="relative rounded-2xl border border-white/5 bg-surface-light/30 p-8 overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-claw-purple/5 via-transparent to-transparent" />
+            <div className="relative">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-claw-purple to-claw-orange p-[1px] mb-5">
+                <div className="w-full h-full rounded-xl bg-surface-light flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9m10.5-6v4.5m0-4.5h-4.5m4.5 0L15 9m-10.5 6v4.5m0-4.5h4.5m-4.5 0L9 15m10.5 6v-4.5m0 4.5h-4.5m4.5 0L15 15" />
                   </svg>
                 </div>
               </div>
+              <h3 className="text-lg font-bold text-white mb-2">Fleet operator</h3>
+              <p className="text-slate-400 text-sm leading-relaxed">
+                Each persona is a <span className="text-white font-medium">ClawInstance</span> — deploy dozens across namespaces, clusters, or environments.
+                Manage your agent fleet the same way you manage any workload:{' '}
+                <span className="font-mono text-claw-cyan text-xs">kubectl</span>,{' '}
+                <span className="font-mono text-claw-cyan text-xs">GitOps</span>,{' '}
+                <span className="font-mono text-claw-cyan text-xs">Helm</span>.
+              </p>
             </div>
-            {/* Copy */}
-            <div>
-              <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
-                Operating a fleet, not just an agent
-              </h3>
-              <p className="text-slate-400 leading-relaxed max-w-2xl">
-                Each persona is a <span className="text-white font-medium">ClawInstance</span> with its own skills, RBAC scope, policy, and schedule.
-                Deploy them across namespaces, clusters, or environments.
-                KubeClaw's control plane reconciles the whole fleet — so you manage agents
-                the same way you manage any other Kubernetes workload:{' '}
-                <span className="font-mono text-claw-cyan text-sm">kubectl</span>,{' '}
-                <span className="font-mono text-claw-cyan text-sm">GitOps</span>,{' '}
-                <span className="font-mono text-claw-cyan text-sm">Helm</span>.
+          </div>
+
+          {/* Agentic workload manager callout */}
+          <div className="relative rounded-2xl border border-white/5 bg-surface-light/30 p-8 overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-kube-blue/5 via-transparent to-transparent" />
+            <div className="relative">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-kube-blue to-claw-cyan p-[1px] mb-5">
+                <div className="w-full h-full rounded-xl bg-surface-light flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+                  </svg>
+                </div>
+              </div>
+              <h3 className="text-lg font-bold text-white mb-2">Agentic workload manager</h3>
+              <p className="text-slate-400 text-sm leading-relaxed">
+                Host agents that <span className="text-white font-medium">other people consume</span> — via Slack, Telegram, Discord, WhatsApp, or API.
+                Each agent runs in its own pod with tenant isolation, scoped RBAC, and channel bindings.
+                Your users interact with the agents. You control the blast radius.
               </p>
             </div>
           </div>
