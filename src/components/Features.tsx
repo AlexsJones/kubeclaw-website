@@ -72,7 +72,7 @@ const features = [
     title: 'Persistent Memory',
     subtitle: 'Agents that remember',
     description:
-      'Each ClawInstance gets a ConfigMap-backed persistent memory (MEMORY.md). Mounted read-only into every agent pod, prepended as context, and automatically updated after each run. Memory lives in etcd — no external databases, fully declarative.',
+      'Each SympoziumInstance gets a ConfigMap-backed persistent memory (MEMORY.md). Mounted read-only into every agent pod, prepended as context, and automatically updated after each run. Memory lives in etcd — no external databases, fully declarative.',
     highlights: [
       'ConfigMap-backed MEMORY.md',
       'Auto-updated after each run',
@@ -90,7 +90,7 @@ const features = [
     title: 'Scheduled Heartbeats',
     subtitle: 'Proactive cluster & task automation',
     description:
-      'ClawSchedule CRDs define cron-based recurring agent runs — perfect for automated cluster health checks, overnight alert reviews, resource right-sizing sweeps, or any domain-specific task. Concurrency policies (Forbid, Allow, Replace) work like CronJob.',
+      'SympoziumSchedule CRDs define cron-based recurring agent runs — perfect for automated cluster health checks, overnight alert reviews, resource right-sizing sweeps, or any domain-specific task. Concurrency policies (Forbid, Allow, Replace) work like CronJob.',
     highlights: [
       'Automated cluster health sweeps',
       'Alert triage & remediation on schedule',

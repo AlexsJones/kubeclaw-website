@@ -92,7 +92,7 @@ export default function Hero() {
             </span>
           </a>
           <a
-            href="https://github.com/AlexsJones/kubeclaw"
+            href="https://github.com/AlexsJones/sympozium"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-4 text-lg font-semibold text-white bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 hover:border-white/20 transition-all hover:scale-105 flex items-center gap-2"
@@ -116,14 +116,14 @@ export default function Hero() {
             <div className="p-6 font-mono text-sm">
               <div className="text-slate-400 mb-1">
                 <span className="text-claw-green">$</span>{' '}
-                <span className="text-white">curl -fsSL https://deploy.k8sclaw.ai/install.sh | sh</span>
+                <span className="text-white">curl -fsSL https://deploy.sympozium.ai/install.sh | sh</span>
               </div>
               <div className="text-slate-500 mb-3">
-                <span className="text-claw-cyan">✓</span> KubeClaw CLI installed
+                <span className="text-claw-cyan">✓</span> Sympozium CLI installed
               </div>
               <div className="text-slate-400 mb-1">
                 <span className="text-claw-green">$</span>{' '}
-                <span className="text-white">kubeclaw install</span>
+                <span className="text-white">sympozium install</span>
               </div>
               <div className="text-slate-500 mb-1">
                 <span className="text-claw-cyan">✓</span> CRDs applied
@@ -139,7 +139,7 @@ export default function Hero() {
               </div>
               <div className="text-slate-400">
                 <span className="text-claw-green">$</span>{' '}
-                <span className="text-white">kubeclaw</span>
+                <span className="text-white">sympozium</span>
               </div>
               <div className="mt-1 text-slate-500">
                 <span className="animate-pulse text-claw-orange">▊</span>
@@ -153,7 +153,7 @@ export default function Hero() {
           <div className="rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40">
             <img
               src="/demo.gif"
-              alt="KubeClaw interactive TUI demo — k9s-style cluster management"
+              alt="Sympozium interactive TUI demo — k9s-style cluster management"
               className="w-full h-auto"
             />
           </div>

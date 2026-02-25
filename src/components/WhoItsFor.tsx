@@ -75,7 +75,7 @@ export default function WhoItsFor() {
           </h2>
           <p className="text-lg text-slate-400 max-w-3xl mx-auto">
             <span className="text-white font-medium">Cluster operators</span> deploy purpose-built agent personas — SRE, security, platform eng — each with its own skills, policy, and heartbeat.
-            <span className="text-claw-orange font-medium">Platform teams</span> use KubeClaw to host agentic workloads that other teams and end-users interact with through Slack, Telegram, Discord, or API — with full tenant isolation, RBAC, and audit trails baked in.
+            <span className="text-claw-orange font-medium">Platform teams</span> use Sympozium to host agentic workloads that other teams and end-users interact with through Slack, Telegram, Discord, or API — with full tenant isolation, RBAC, and audit trails baked in.
           </p>
         </div>
 
@@ -138,7 +138,7 @@ export default function WhoItsFor() {
               </div>
               <h3 className="text-lg font-bold text-white mb-2">Fleet operator</h3>
               <p className="text-slate-400 text-sm leading-relaxed">
-                Each persona is a <span className="text-white font-medium">ClawInstance</span> — deploy dozens across namespaces, clusters, or environments.
+                Each persona is a <span className="text-white font-medium">SympoziumInstance</span> — deploy dozens across namespaces, clusters, or environments.
                 Manage your agent fleet the same way you manage any workload:{' '}
                 <span className="font-mono text-claw-cyan text-xs">kubectl</span>,{' '}
                 <span className="font-mono text-claw-cyan text-xs">GitOps</span>,{' '}

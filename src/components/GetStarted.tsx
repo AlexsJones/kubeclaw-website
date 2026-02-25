@@ -38,7 +38,7 @@ export default function GetStarted() {
             <div className="p-6">
               <div className="font-mono text-sm bg-surface/60 rounded-lg p-4 border border-white/5">
                 <span className="text-claw-green select-none">$ </span>
-                <span className="text-white">curl -fsSL https://deploy.k8sclaw.ai/install.sh | sh</span>
+                <span className="text-white">curl -fsSL https://deploy.sympozium.ai/install.sh | sh</span>
               </div>
               <p className="mt-3 text-sm text-slate-500">
                 Detects your OS and architecture, downloads the latest release binary.
@@ -55,7 +55,7 @@ export default function GetStarted() {
             <div className="p-6">
               <div className="font-mono text-sm bg-surface/60 rounded-lg p-4 border border-white/5">
                 <span className="text-claw-green select-none">$ </span>
-                <span className="text-white">kubeclaw install</span>
+                <span className="text-white">sympozium install</span>
               </div>
               <p className="mt-3 text-sm text-slate-500">
                 Applies CRDs, RBAC, controller, API server, admission webhook, NATS, 
@@ -73,15 +73,15 @@ export default function GetStarted() {
             <div className="p-6">
               <div className="font-mono text-sm bg-surface/60 rounded-lg p-4 border border-white/5">
                 <span className="text-claw-green select-none">$ </span>
-                <span className="text-white">kubeclaw onboard</span>
+                <span className="text-white">sympozium onboard</span>
               </div>
               <div className="mt-4 font-mono text-xs text-slate-500 bg-surface/40 rounded-lg p-4 border border-white/5">
                 <div className="text-claw-purple">╔═══════════════════════════════════════════╗</div>
-                <div className="text-claw-purple">║{'     '}KubeClaw · Onboarding Wizard{'        '}║</div>
+                <div className="text-claw-purple">║{'     '}Sympozium · Onboarding Wizard{'        '}║</div>
                 <div className="text-claw-purple">╚═══════════════════════════════════════════╝</div>
                 <div className="mt-2 space-y-1 text-slate-400">
                   <div>Step 1/5 — Cluster check</div>
-                  <div>Step 2/5 — Name your ClawInstance</div>
+                  <div>Step 2/5 — Name your SympoziumInstance</div>
                   <div>Step 3/5 — Choose your AI provider</div>
                   <div>Step 4/5 — Connect a channel (optional)</div>
                   <div>Step 5/5 — Apply default policy</div>
@@ -94,12 +94,12 @@ export default function GetStarted() {
           <div className="rounded-2xl overflow-hidden border border-white/5 bg-surface-light/30">
             <div className="flex items-center gap-3 px-6 py-4 bg-surface-lighter/30 border-b border-white/5">
               <span className="w-7 h-7 rounded-lg bg-claw-green/20 text-claw-green text-sm font-bold flex items-center justify-center">4</span>
-              <span className="font-semibold text-white">Launch KubeClaw</span>
+              <span className="font-semibold text-white">Launch Sympozium</span>
             </div>
             <div className="p-6">
               <div className="font-mono text-sm bg-surface/60 rounded-lg p-4 border border-white/5">
                 <span className="text-claw-green select-none">$ </span>
-                <span className="text-white">kubeclaw</span>
+                <span className="text-white">sympozium</span>
               </div>
               <p className="mt-3 text-sm text-slate-500">
                 The interactive TUI gives you full visibility — browse instances, runs, 

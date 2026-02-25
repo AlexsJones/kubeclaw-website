@@ -68,7 +68,7 @@ const reasons = [
   },
 ]
 
-export default function WhyKubeClaw() {
+export default function WhySympozium() {
   return (
     <section id="why" className="relative py-32 overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
@@ -80,7 +80,7 @@ export default function WhyKubeClaw() {
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
-            Why KubeClaw?
+            Why Sympozium?
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Two powerful use cases.
@@ -90,7 +90,7 @@ export default function WhyKubeClaw() {
             </span>
           </h2>
           <p className="text-lg text-slate-400 max-w-3xl mx-auto">
-            Use KubeClaw to <span className="text-claw-orange font-medium">orchestrate fleets of AI agents</span> for
+            Use Sympozium to <span className="text-claw-orange font-medium">orchestrate fleets of AI agents</span> for
             any workload — customer support, code review, data pipelines. Or point those agents
             inward to <span className="text-kube-blue font-medium">administer the cluster itself</span>: diagnose
             failures, scale deployments, triage alerts, and remediate issues — all with Kubernetes-native

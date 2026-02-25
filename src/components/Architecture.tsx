@@ -142,7 +142,7 @@ export default function Architecture() {
             </span>
           </h2>
           <p className="text-lg text-slate-400 max-w-3xl mx-auto">
-            Every concept that OpenClaw manages in application code, KubeClaw expresses as a
+            Every concept that OpenClaw manages in application code, Sympozium expresses as a
             Kubernetes resource. The same architecture powers both agent fleet orchestration
             and agentic cluster administration.
           </p>
@@ -212,7 +212,7 @@ export default function Architecture() {
           <div className="text-center mb-10">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">System Overview</h3>
             <p className="text-sm text-slate-400">
-              The full KubeClaw architecture inside a Kubernetes cluster
+              The full Sympozium architecture inside a Kubernetes cluster
             </p>
           </div>
 
@@ -235,7 +235,7 @@ export default function Architecture() {
                 <div className="flex items-center gap-2">
                   <div className="text-xs font-mono text-right">
                     <div className="text-kube-blue font-bold">Operator / SRE</div>
-                    <div className="text-slate-500">kubeclaw TUI · kubectl · k9s</div>
+                    <div className="text-slate-500">sympozium TUI · kubectl · k9s</div>
                   </div>
                   <div className="w-8 h-8 rounded-full bg-kube-blue/20 border border-kube-blue/40 flex items-center justify-center text-sm">{'\u{1F6E0}'}</div>
                 </div>
@@ -244,7 +244,7 @@ export default function Architecture() {
               {/* connecting arrows from actors */}
               <div className="flex justify-between px-6 mb-2">
                 <Arrow label="messages" />
-                <Arrow label="kubeclaw TUI / kubectl" />
+                <Arrow label="sympozium TUI / kubectl" />
               </div>
 
               {/* Row 1: Channel pods + Control Plane */}
@@ -262,7 +262,7 @@ export default function Architecture() {
                   <div className="flex flex-wrap gap-2 mt-2">
                     <Node
                       label="Controller Manager"
-                      sub="ClawInstance · AgentRun · ClawPolicy · SkillPack · ClawSchedule"
+                      sub="SympoziumInstance · AgentRun · SympoziumPolicy · SkillPack · SympoziumSchedule"
                       color="purple"
                     />
                     <Node label="API Server" sub="HTTP + WebSocket" color="orange" />
@@ -314,7 +314,7 @@ export default function Architecture() {
 
                 <Group title="Scheduled Tasks" color="yellow">
                   <div className="mt-2 space-y-2">
-                    <Node label="ClawSchedule Controller" sub="Cron-based reconciler" color="yellow" />
+                    <Node label="SympoziumSchedule Controller" sub="Cron-based reconciler" color="yellow" />
                     <div className="text-[10px] font-mono text-center text-slate-500">
                       creates AgentRuns on schedule {'→'}
                     </div>

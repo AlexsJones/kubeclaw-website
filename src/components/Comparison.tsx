@@ -2,62 +2,62 @@ const rows = [
   {
     category: 'Agent execution',
     openclaw: 'Shared memory, single process',
-    kubeclaw: 'Ephemeral Pod per invocation (K8s Job)',
+    sympozium: 'Ephemeral Pod per invocation (K8s Job)',
   },
   {
     category: 'Orchestration',
     openclaw: 'In-process registry + lane queue',
-    kubeclaw: 'CRD-based registry with controller reconciliation',
+    sympozium: 'CRD-based registry with controller reconciliation',
   },
   {
     category: 'Sandbox isolation',
     openclaw: 'Long-lived Docker sidecar',
-    kubeclaw: 'Pod SecurityContext + PodSecurity admission',
+    sympozium: 'Pod SecurityContext + PodSecurity admission',
   },
   {
     category: 'IPC',
     openclaw: 'In-process EventEmitter',
-    kubeclaw: 'Filesystem sidecar + NATS JetStream',
+    sympozium: 'Filesystem sidecar + NATS JetStream',
   },
   {
     category: 'Tool / feature gating',
     openclaw: '7-layer in-process pipeline',
-    kubeclaw: 'Admission webhooks + ClawPolicy CRD',
+    sympozium: 'Admission webhooks + SympoziumPolicy CRD',
   },
   {
     category: 'Persistent memory',
     openclaw: 'Files on disk (~/.openclaw/)',
-    kubeclaw: 'ConfigMap per instance, controller-managed',
+    sympozium: 'ConfigMap per instance, controller-managed',
   },
   {
     category: 'Scheduled tasks',
     openclaw: 'Cron jobs / external scripts',
-    kubeclaw: 'ClawSchedule CRD with cron controller',
+    sympozium: 'SympoziumSchedule CRD with cron controller',
   },
   {
     category: 'State',
     openclaw: 'SQLite + flat files',
-    kubeclaw: 'etcd (CRDs) + PostgreSQL + object storage',
+    sympozium: 'etcd (CRDs) + PostgreSQL + object storage',
   },
   {
     category: 'Multi-tenancy',
     openclaw: 'Single-instance file lock',
-    kubeclaw: 'Namespaced CRDs, RBAC, NetworkPolicy',
+    sympozium: 'Namespaced CRDs, RBAC, NetworkPolicy',
   },
   {
     category: 'Scaling',
     openclaw: 'Vertical only',
-    kubeclaw: 'Horizontal — stateless control plane, HPA',
+    sympozium: 'Horizontal — stateless control plane, HPA',
   },
   {
     category: 'Channel connections',
     openclaw: 'In-process per channel',
-    kubeclaw: 'Dedicated Deployment per channel type',
+    sympozium: 'Dedicated Deployment per channel type',
   },
   {
     category: 'Observability',
     openclaw: 'Application logs',
-    kubeclaw: 'kubectl logs, events, conditions, k9s TUI',
+    sympozium: 'kubectl logs, events, conditions, k9s TUI',
   },
 ]
 
@@ -81,11 +81,11 @@ export default function Comparison() {
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             OpenClaw vs{' '}
             <span className="bg-gradient-to-r from-kube-blue to-claw-purple bg-clip-text text-transparent">
-              KubeClaw
+              Sympozium
             </span>
           </h2>
           <p className="text-lg text-slate-400 max-w-3xl mx-auto">
-            OpenClaw pioneered agentic orchestration. KubeClaw takes every concept and 
+            OpenClaw pioneered agentic orchestration. Sympozium takes every concept and 
             expresses it as a Kubernetes-native resource — then adds the ability to point agents at the cluster itself.
           </p>
         </div>
@@ -106,7 +106,7 @@ export default function Comparison() {
               <div className="p-4 text-center">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-kube-blue/10 to-claw-purple/10 border border-kube-blue/30">
                   <span className="text-base font-bold bg-gradient-to-r from-kube-blue to-claw-purple bg-clip-text text-transparent">
-                    KubeClaw
+                    Sympozium
                   </span>
                 </div>
               </div>
@@ -126,7 +126,7 @@ export default function Comparison() {
                     <span className="text-sm text-slate-400 text-center">{row.openclaw}</span>
                   </div>
                   <div className="p-4 flex items-center justify-center bg-kube-blue/[0.03] border-l-2 border-kube-blue/20">
-                    <span className="text-sm text-kube-blue text-center font-medium">{row.kubeclaw}</span>
+                    <span className="text-sm text-kube-blue text-center font-medium">{row.sympozium}</span>
                   </div>
                 </div>
               ))}
@@ -138,7 +138,7 @@ export default function Comparison() {
         <div className="mt-12 p-6 rounded-2xl bg-gradient-to-r from-kube-blue/5 to-claw-purple/5 border border-kube-blue/20 text-center">
           <p className="text-lg text-slate-300">
             <span className="font-bold text-white">The result:</span> every concept that OpenClaw manages in application code,
-            KubeClaw expresses as a Kubernetes resource — 
+            Sympozium expresses as a Kubernetes resource — 
             <span className="text-kube-blue font-semibold"> declarative</span>,{' '}
             <span className="text-claw-purple font-semibold">reconcilable</span>,{' '}
             <span className="text-claw-cyan font-semibold">observable</span>, and{' '}

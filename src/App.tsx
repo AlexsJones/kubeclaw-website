@@ -1,6 +1,6 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import WhyKubeClaw from './components/WhyKubeClaw'
+import WhySympozium from './components/WhySympozium'
 import WhoItsFor from './components/WhoItsFor'
 import Features from './components/Features'
 import Architecture from './components/Architecture'
@@ -15,7 +15,7 @@ function App() {
     <div className="min-h-screen bg-surface font-sans">
       <Navbar />
       <Hero />
-      <WhyKubeClaw />
+      <WhySympozium />
       <WhoItsFor />
       <Features />
       <Architecture />

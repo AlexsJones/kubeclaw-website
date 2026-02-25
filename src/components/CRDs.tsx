@@ -23,7 +23,7 @@ const crdStyles: Record<string, { card: string; name: string }> = {
 
 const crds = [
   {
-    name: 'ClawInstance',
+    name: 'SympoziumInstance',
     analogy: 'Namespace / Tenant',
     description: 'Per-user gateway — channels, provider config, memory settings, skill bindings',
     color: 'kube-blue',
@@ -35,7 +35,7 @@ const crds = [
     color: 'claw-purple',
   },
   {
-    name: 'ClawPolicy',
+    name: 'SympoziumPolicy',
     analogy: 'NetworkPolicy',
     description: 'Feature and tool gating — what an agent can and cannot do',
     color: 'claw-red',
@@ -47,7 +47,7 @@ const crds = [
     color: 'claw-orange',
   },
   {
-    name: 'ClawSchedule',
+    name: 'SympoziumSchedule',
     analogy: 'CronJob',
     description: 'Recurring tasks — heartbeats, sweeps, scheduled runs with cron expressions',
     color: 'claw-green',
@@ -75,7 +75,7 @@ export default function CRDs() {
             </span>
           </h2>
           <p className="text-lg text-slate-400 max-w-3xl mx-auto">
-            KubeClaw models every agentic concept as a Kubernetes Custom Resource — whether you're
+            Sympozium models every agentic concept as a Kubernetes Custom Resource — whether you're
             running external agent workflows or giving agents the tools to manage the cluster itself.
             Familiar semantics, native tooling, GitOps-ready.
           </p>
@@ -105,7 +105,7 @@ export default function CRDs() {
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-8">
             <h3 className="text-xl font-bold text-white">Example: Scheduled Cluster Health Check</h3>
-            <p className="text-sm text-slate-400 mt-1">A ClawSchedule resource that runs an agent to review overnight alerts and cluster status every morning</p>
+            <p className="text-sm text-slate-400 mt-1">A SympoziumSchedule resource that runs an agent to review overnight alerts and cluster status every morning</p>
           </div>
           <div className="rounded-2xl overflow-hidden border border-white/5 bg-surface-light/50">
             <div className="flex items-center gap-2 px-4 py-3 bg-surface-lighter/50 border-b border-white/5">
@@ -116,8 +116,8 @@ export default function CRDs() {
             </div>
             <pre className="p-6 font-mono text-sm overflow-x-auto">
               <code>
-                <span className="text-claw-purple">apiVersion</span><span className="text-slate-500">:</span> <span className="text-claw-green">kubeclaw.io/v1alpha1</span>{'\n'}
-                <span className="text-claw-purple">kind</span><span className="text-slate-500">:</span> <span className="text-claw-green">ClawSchedule</span>{'\n'}
+                <span className="text-claw-purple">apiVersion</span><span className="text-slate-500">:</span> <span className="text-claw-green">sympozium.io/v1alpha1</span>{'\n'}
+                <span className="text-claw-purple">kind</span><span className="text-slate-500">:</span> <span className="text-claw-green">SympoziumSchedule</span>{'\n'}
                 <span className="text-claw-purple">metadata</span><span className="text-slate-500">:</span>{'\n'}
                 <span className="text-slate-500">  </span><span className="text-claw-purple">name</span><span className="text-slate-500">:</span> <span className="text-claw-green">daily-standup</span>{'\n'}
                 <span className="text-claw-purple">spec</span><span className="text-slate-500">:</span>{'\n'}

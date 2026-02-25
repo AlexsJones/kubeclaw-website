@@ -16,11 +16,11 @@ export default function Footer() {
             ?
           </h2>
           <p className="text-lg text-slate-400 mb-10 max-w-2xl mx-auto">
-            Deploy KubeClaw to your cluster in seconds. Open source, Apache 2.0 licensed.
+            Deploy Sympozium to your cluster in seconds. Open source, Apache 2.0 licensed.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://github.com/AlexsJones/kubeclaw"
+              href="https://github.com/AlexsJones/sympozium"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative px-8 py-4 text-lg font-bold text-white rounded-xl overflow-hidden transition-all hover:scale-105 hover:shadow-2xl hover:shadow-kube-blue/25"
@@ -50,9 +50,9 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <img src="/icon.png" alt="KubeClaw" className="w-9 h-9 rounded-lg object-cover" />
+              <img src="/icon.png" alt="Sympozium" className="w-9 h-9 rounded-lg object-cover" />
               <span className="text-xl font-bold text-white">
-                Kube<span className="text-claw-orange">Claw</span>
+                Sympo<span className="text-claw-orange">zium</span>
               </span>
             </div>
             <p className="text-sm text-slate-500 leading-relaxed">
@@ -68,10 +68,10 @@ export default function Footer() {
             <h4 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">Project</h4>
             <ul className="space-y-3">
               {[
-                { label: 'GitHub', href: 'https://github.com/AlexsJones/kubeclaw' },
-                { label: 'Releases', href: 'https://github.com/AlexsJones/kubeclaw/releases' },
-                { label: 'Issues', href: 'https://github.com/AlexsJones/kubeclaw/issues' },
-                { label: 'License (Apache 2.0)', href: 'https://github.com/AlexsJones/kubeclaw/blob/main/LICENSE' },
+                { label: 'GitHub', href: 'https://github.com/AlexsJones/sympozium' },
+                { label: 'Releases', href: 'https://github.com/AlexsJones/sympozium/releases' },
+                { label: 'Issues', href: 'https://github.com/AlexsJones/sympozium/issues' },
+                { label: 'License (Apache 2.0)', href: 'https://github.com/AlexsJones/sympozium/blob/main/LICENSE' },
               ].map((link) => (
                 <li key={link.label}>
                   <a
@@ -115,7 +115,7 @@ export default function Footer() {
               {[
                 { label: 'Getting Started', href: '#get-started' },
                 { label: 'Architecture', href: '#architecture' },
-                { label: 'Skill Authoring Guide', href: 'https://github.com/AlexsJones/kubeclaw/blob/main/docs/writing-skills.md' },
+                { label: 'Skill Authoring Guide', href: 'https://github.com/AlexsJones/sympozium/blob/main/docs/writing-skills.md' },
               ].map((link) => (
                 <li key={link.label}>
                   <a
@@ -139,7 +139,7 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com/AlexsJones/kubeclaw"
+              href="https://github.com/AlexsJones/sympozium"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-500 hover:text-white transition-colors"
