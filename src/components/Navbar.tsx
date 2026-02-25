@@ -13,6 +13,7 @@ export default function Navbar() {
   const links = [
     { label: 'Features', href: '#features' },
     { label: 'Architecture', href: '#architecture' },
+    { label: 'Security', href: '#security' },
     { label: 'vs OpenClaw', href: '#comparison' },
     { label: 'Get Started', href: '#get-started' },
   ]
