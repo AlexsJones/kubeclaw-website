@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import WhyKubeClaw from './components/WhyKubeClaw'
+import WhoItsFor from './components/WhoItsFor'
 import Features from './components/Features'
 import Architecture from './components/Architecture'
 import Comparison from './components/Comparison'
@@ -15,6 +16,7 @@ function App() {
       <Navbar />
       <Hero />
       <WhyKubeClaw />
+      <WhoItsFor />
       <Features />
       <Architecture />
       <Comparison />
