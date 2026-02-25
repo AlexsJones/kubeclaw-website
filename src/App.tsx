@@ -4,6 +4,7 @@ import WhyKubeClaw from './components/WhyKubeClaw'
 import Features from './components/Features'
 import Architecture from './components/Architecture'
 import Comparison from './components/Comparison'
+import Security from './components/Security'
 import GetStarted from './components/GetStarted'
 import CRDs from './components/CRDs'
 import Footer from './components/Footer'
@@ -17,6 +18,7 @@ function App() {
       <Features />
       <Architecture />
       <Comparison />
+      <Security />
       <CRDs />
       <GetStarted />
       <Footer />
