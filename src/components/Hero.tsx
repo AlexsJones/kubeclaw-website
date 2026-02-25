@@ -148,12 +148,12 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* TUI screenshot */}
+        {/* TUI demo */}
         <div className="max-w-4xl mx-auto mt-12">
           <div className="rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40">
             <img
-              src="/tui.png"
-              alt="KubeClaw interactive TUI — k9s-style cluster management"
+              src="/demo.gif"
+              alt="KubeClaw interactive TUI demo — k9s-style cluster management"
               className="w-full h-auto"
             />
           </div>
