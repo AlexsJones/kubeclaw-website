@@ -1,6 +1,7 @@
 const personas = [
   {
     role: 'SRE On-Call',
+    pack: 'platform-team',
     skills: ['k8s-ops', 'incident-response'],
     description:
       'Always-on agent that monitors cluster health, triages incidents, and performs rollbacks — every 30 minutes.',
@@ -18,6 +19,7 @@ const personas = [
   },
   {
     role: 'Security Auditor',
+    pack: 'platform-team',
     skills: ['code-review', 'k8s-ops'],
     description:
       'Daily scans for privilege escalation, hardcoded secrets, missing NetworkPolicies — under a restrictive policy that blocks before it breaks.',
@@ -35,6 +37,7 @@ const personas = [
   },
   {
     role: 'DevOps / Platform Eng',
+    pack: 'devops-essentials',
     skills: ['k8s-ops', 'code-review'],
     description:
       'General-purpose agent for day-to-day ops — scaling, namespace provisioning, rollout history, node drains — running permissive on dev clusters.',
@@ -67,15 +70,17 @@ export default function WhoItsFor() {
             Who It's For
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Run agents for your cluster.
+            Activate a PersonaPack.
             <br />
             <span className="bg-gradient-to-r from-claw-orange to-claw-purple bg-clip-text text-transparent">
-              Serve agents to your users.
+              Get a team of agents instantly.
             </span>
           </h2>
           <p className="text-lg text-slate-400 max-w-3xl mx-auto">
-            <span className="text-white font-medium">Cluster operators</span> deploy purpose-built agent personas — SRE, security, platform eng — each with its own skills, policy, and heartbeat.
-            <span className="text-claw-orange font-medium">Platform teams</span> use Sympozium to host agentic workloads that other teams and end-users interact with through Slack, Telegram, Discord, or API — with full tenant isolation, RBAC, and audit trails baked in.
+            Sympozium ships with <span className="text-claw-cyan font-medium">built-in PersonaPacks</span> — pre-configured
+            bundles of agent personas, each with its own system prompt, skills, tool policy, schedule, and persistent memory.
+            Activate a pack in the TUI, enter your API key, and the controller stamps out all agents automatically.
+            Think of them as <span className="text-white font-medium">Helm Charts for AI agents</span>.
           </p>
         </div>
 
@@ -98,6 +103,9 @@ export default function WhoItsFor() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-1">{persona.role}</h3>
                 <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="text-xs font-mono px-2 py-0.5 rounded-md bg-claw-cyan/10 text-claw-cyan border border-claw-cyan/20">
+                    {persona.pack}
+                  </span>
                   {persona.skills.map((skill) => (
                     <span key={skill} className="text-xs font-mono px-2 py-0.5 rounded-md bg-white/5 text-slate-400 border border-white/5">
                       {skill}
@@ -123,48 +131,120 @@ export default function WhoItsFor() {
           ))}
         </div>
 
-        {/* Two callout panels */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Fleet operator callout */}
-          <div className="relative rounded-2xl border border-white/5 bg-surface-light/30 p-8 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-claw-purple/5 via-transparent to-transparent" />
-            <div className="relative">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-claw-purple to-claw-orange p-[1px] mb-5">
-                <div className="w-full h-full rounded-xl bg-surface-light flex items-center justify-center">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9m10.5-6v4.5m0-4.5h-4.5m4.5 0L15 9m-10.5 6v4.5m0-4.5h4.5m-4.5 0L9 15m10.5 6v-4.5m0 4.5h-4.5m4.5 0L15 15" />
-                  </svg>
+        {/* Built-in PersonaPacks */}
+        <div className="mt-16">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-white mb-2">Built-in PersonaPacks</h3>
+            <p className="text-sm text-slate-400">Ship with Sympozium — activate via the TUI or <span className="font-mono text-claw-cyan text-xs">kubectl</span></p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* platform-team pack */}
+            <div className="relative rounded-2xl border border-claw-cyan/20 bg-surface-light/30 p-8 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-claw-cyan/5 via-transparent to-transparent" />
+              <div className="relative">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-claw-cyan to-kube-blue p-[1px]">
+                    <div className="w-full h-full rounded-xl bg-surface-light flex items-center justify-center">
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9m10.5-6v4.5m0-4.5h-4.5m4.5 0L15 9m-10.5 6v4.5m0-4.5h4.5m-4.5 0L9 15m10.5 6v-4.5m0 4.5h-4.5m4.5 0L15 15" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-bold text-white font-mono">platform-team</h4>
+                    <span className="text-xs text-claw-cyan">Platform</span>
+                  </div>
+                </div>
+                <p className="text-slate-400 text-sm leading-relaxed mb-4">
+                  Core platform engineering — security audits, cluster health monitoring, and scheduled manifest review.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {['Security Guardian', 'SRE Watchdog', 'Platform Engineer'].map((name) => (
+                    <span key={name} className="text-xs font-medium px-2.5 py-1 rounded-lg bg-claw-cyan/10 text-claw-cyan border border-claw-cyan/20">
+                      {name}
+                    </span>
+                  ))}
                 </div>
               </div>
-              <h3 className="text-lg font-bold text-white mb-2">Fleet operator</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
-                Each persona is a <span className="text-white font-medium">SympoziumInstance</span> — deploy dozens across namespaces, clusters, or environments.
-                Manage your agent fleet the same way you manage any workload:{' '}
-                <span className="font-mono text-claw-cyan text-xs">kubectl</span>,{' '}
-                <span className="font-mono text-claw-cyan text-xs">GitOps</span>,{' '}
-                <span className="font-mono text-claw-cyan text-xs">Helm</span>.
-              </p>
+            </div>
+
+            {/* devops-essentials pack */}
+            <div className="relative rounded-2xl border border-claw-orange/20 bg-surface-light/30 p-8 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-claw-orange/5 via-transparent to-transparent" />
+              <div className="relative">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-claw-orange to-claw-red p-[1px]">
+                    <div className="w-full h-full rounded-xl bg-surface-light flex items-center justify-center">
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11.42 15.17l-5.384 3.181 1.028-5.993L2.114 7.63l6.016-.874L11.42 1.5l2.692 5.256 6.016.874-4.95 4.728 1.028 5.993z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-bold text-white font-mono">devops-essentials</h4>
+                    <span className="text-xs text-claw-orange">DevOps</span>
+                  </div>
+                </div>
+                <p className="text-slate-400 text-sm leading-relaxed mb-4">
+                  DevOps workflows — incident triage, resource right-sizing, and cost optimisation.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {['Incident Responder', 'Cost Analyzer'].map((name) => (
+                    <span key={name} className="text-xs font-medium px-2.5 py-1 rounded-lg bg-claw-orange/10 text-claw-orange border border-claw-orange/20">
+                      {name}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Agentic workload manager callout */}
-          <div className="relative rounded-2xl border border-white/5 bg-surface-light/30 p-8 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-kube-blue/5 via-transparent to-transparent" />
-            <div className="relative">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-kube-blue to-claw-cyan p-[1px] mb-5">
-                <div className="w-full h-full rounded-xl bg-surface-light flex items-center justify-center">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
-                  </svg>
-                </div>
-              </div>
-              <h3 className="text-lg font-bold text-white mb-2">Agentic workload manager</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
-                Host agents that <span className="text-white font-medium">other people consume</span> — via Slack, Telegram, Discord, WhatsApp, or API.
-                Each agent runs in its own pod with tenant isolation, scoped RBAC, and channel bindings.
-                Your users interact with the agents. You control the blast radius.
-              </p>
+          {/* PersonaPack TUI demo */}
+          <div className="mt-10 max-w-4xl mx-auto">
+            <div className="rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40">
+              <img
+                src="/personas.gif"
+                alt="PersonaPack activation in the Sympozium TUI — select a pack, enter API key, agents deploy automatically"
+                className="w-full h-auto"
+              />
             </div>
+            <p className="mt-4 text-sm text-slate-500 font-mono text-center">
+              Activating the platform-team PersonaPack — 3 agents deployed in seconds
+            </p>
+          </div>
+
+          {/* How it works strip */}
+          <div className="mt-8 rounded-2xl border border-white/5 bg-surface-light/20 p-6">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-sm">
+              <div className="flex items-center gap-2">
+                <span className="w-6 h-6 rounded-full bg-kube-blue/20 text-kube-blue text-xs font-bold flex items-center justify-center">1</span>
+                <span className="text-slate-300">Pick a pack in the TUI</span>
+              </div>
+              <svg className="w-4 h-4 text-slate-600 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+              <div className="flex items-center gap-2">
+                <span className="w-6 h-6 rounded-full bg-claw-purple/20 text-claw-purple text-xs font-bold flex items-center justify-center">2</span>
+                <span className="text-slate-300">Enter your API key</span>
+              </div>
+              <svg className="w-4 h-4 text-slate-600 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+              <div className="flex items-center gap-2">
+                <span className="w-6 h-6 rounded-full bg-claw-green/20 text-claw-green text-xs font-bold flex items-center justify-center">3</span>
+                <span className="text-slate-300">Controller creates all agents</span>
+              </div>
+            </div>
+            <p className="text-center text-xs text-slate-500 mt-3">
+              Each persona gets a SympoziumInstance, SympoziumSchedule, and seeded memory ConfigMap — all with ownerReferences for cascading cleanup.
+            </p>
+          </div>
+
+          {/* Custom pack callout */}
+          <div className="mt-6 text-center">
+            <p className="text-sm text-slate-500">
+              Need something different? <span className="text-white font-medium">Write your own PersonaPack</span> — define personas with custom system prompts, skills, schedules, and memory seeds, then <span className="font-mono text-claw-cyan text-xs">kubectl apply</span>.
+            </p>
           </div>
         </div>
       </div>

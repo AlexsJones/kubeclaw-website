@@ -19,6 +19,10 @@ const crdStyles: Record<string, { card: string; name: string }> = {
     card: 'relative group p-6 rounded-2xl bg-surface-light/30 border border-white/5 hover:border-claw-green/30 transition-all duration-300',
     name: 'text-claw-green font-mono text-sm font-bold mb-2',
   },
+  'claw-cyan': {
+    card: 'relative group p-6 rounded-2xl bg-surface-light/30 border border-white/5 hover:border-claw-cyan/30 transition-all duration-300',
+    name: 'text-claw-cyan font-mono text-sm font-bold mb-2',
+  },
 }
 
 const crds = [
@@ -52,6 +56,12 @@ const crds = [
     description: 'Recurring tasks — heartbeats, sweeps, scheduled runs with cron expressions',
     color: 'claw-green',
   },
+  {
+    name: 'PersonaPack',
+    analogy: 'Helm Chart',
+    description: 'Pre-configured agent bundles — activating a pack stamps out instances, schedules, and memory for each persona',
+    color: 'claw-cyan',
+  },
 ]
 
 export default function CRDs() {
@@ -82,7 +92,7 @@ export default function CRDs() {
         </div>
 
         {/* CRD cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
           {crds.map((crd, i) => (
             <div
               key={i}
@@ -101,34 +111,72 @@ export default function CRDs() {
           ))}
         </div>
 
-        {/* Example YAML */}
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-8">
-            <h3 className="text-xl font-bold text-white">Example: Scheduled Cluster Health Check</h3>
-            <p className="text-sm text-slate-400 mt-1">A SympoziumSchedule resource that runs an agent to review overnight alerts and cluster status every morning</p>
-          </div>
-          <div className="rounded-2xl overflow-hidden border border-white/5 bg-surface-light/50">
-            <div className="flex items-center gap-2 px-4 py-3 bg-surface-lighter/50 border-b border-white/5">
-              <div className="w-3 h-3 rounded-full bg-claw-red/80" />
-              <div className="w-3 h-3 rounded-full bg-claw-orange/80" />
-              <div className="w-3 h-3 rounded-full bg-claw-green/80" />
-              <span className="ml-2 text-xs text-slate-500 font-mono">schedule.yaml</span>
+        {/* Example YAMLs */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {/* PersonaPack YAML */}
+          <div>
+            <div className="text-center mb-6">
+              <h3 className="text-xl font-bold text-white">PersonaPack: One Pack, Many Agents</h3>
+              <p className="text-sm text-slate-400 mt-1">Activate a pack and the controller stamps out all agents automatically</p>
             </div>
-            <pre className="p-6 font-mono text-sm overflow-x-auto">
-              <code>
-                <span className="text-claw-purple">apiVersion</span><span className="text-slate-500">:</span> <span className="text-claw-green">sympozium.io/v1alpha1</span>{'\n'}
-                <span className="text-claw-purple">kind</span><span className="text-slate-500">:</span> <span className="text-claw-green">SympoziumSchedule</span>{'\n'}
-                <span className="text-claw-purple">metadata</span><span className="text-slate-500">:</span>{'\n'}
-                <span className="text-slate-500">  </span><span className="text-claw-purple">name</span><span className="text-slate-500">:</span> <span className="text-claw-green">daily-standup</span>{'\n'}
-                <span className="text-claw-purple">spec</span><span className="text-slate-500">:</span>{'\n'}
-                <span className="text-slate-500">  </span><span className="text-claw-purple">instanceRef</span><span className="text-slate-500">:</span> <span className="text-claw-green">alice</span>{'\n'}
-                <span className="text-slate-500">  </span><span className="text-claw-purple">schedule</span><span className="text-slate-500">:</span> <span className="text-claw-orange">"0 9 * * *"</span>        <span className="text-slate-600"># every day at 9am</span>{'\n'}
-                <span className="text-slate-500">  </span><span className="text-claw-purple">type</span><span className="text-slate-500">:</span> <span className="text-claw-green">heartbeat</span>{'\n'}
-                <span className="text-slate-500">  </span><span className="text-claw-purple">task</span><span className="text-slate-500">:</span> <span className="text-claw-green">"Review overnight alerts and summarize status"</span>{'\n'}
-                <span className="text-slate-500">  </span><span className="text-claw-purple">includeMemory</span><span className="text-slate-500">:</span> <span className="text-kube-blue">true</span>{'\n'}
-                <span className="text-slate-500">  </span><span className="text-claw-purple">concurrencyPolicy</span><span className="text-slate-500">:</span> <span className="text-claw-green">Forbid</span>
-              </code>
-            </pre>
+            <div className="rounded-2xl overflow-hidden border border-white/5 bg-surface-light/50">
+              <div className="flex items-center gap-2 px-4 py-3 bg-surface-lighter/50 border-b border-white/5">
+                <div className="w-3 h-3 rounded-full bg-claw-red/80" />
+                <div className="w-3 h-3 rounded-full bg-claw-orange/80" />
+                <div className="w-3 h-3 rounded-full bg-claw-green/80" />
+                <span className="ml-2 text-xs text-slate-500 font-mono">platform-team.yaml</span>
+              </div>
+              <pre className="p-6 font-mono text-sm overflow-x-auto">
+                <code>
+                  <span className="text-claw-purple">apiVersion</span><span className="text-slate-500">:</span> <span className="text-claw-green">sympozium.ai/v1alpha1</span>{'\n'}
+                  <span className="text-claw-purple">kind</span><span className="text-slate-500">:</span> <span className="text-claw-green">PersonaPack</span>{'\n'}
+                  <span className="text-claw-purple">metadata</span><span className="text-slate-500">:</span>{'\n'}
+                  <span className="text-slate-500">  </span><span className="text-claw-purple">name</span><span className="text-slate-500">:</span> <span className="text-claw-green">platform-team</span>{'\n'}
+                  <span className="text-claw-purple">spec</span><span className="text-slate-500">:</span>{'\n'}
+                  <span className="text-slate-500">  </span><span className="text-claw-purple">description</span><span className="text-slate-500">:</span> <span className="text-claw-green">"Core platform engineering agents"</span>{'\n'}
+                  <span className="text-slate-500">  </span><span className="text-claw-purple">category</span><span className="text-slate-500">:</span> <span className="text-claw-green">platform</span>{'\n'}
+                  <span className="text-slate-500">  </span><span className="text-claw-purple">personas</span><span className="text-slate-500">:</span>{'\n'}
+                  <span className="text-slate-500">    - </span><span className="text-claw-purple">name</span><span className="text-slate-500">:</span> <span className="text-claw-green">security-guardian</span>{'\n'}
+                  <span className="text-slate-500">      </span><span className="text-claw-purple">skills</span><span className="text-slate-500">:</span> <span className="text-slate-400">[</span><span className="text-claw-green">k8s-ops</span><span className="text-slate-400">]</span>{'\n'}
+                  <span className="text-slate-500">      </span><span className="text-claw-purple">schedule</span><span className="text-slate-500">:</span>{'\n'}
+                  <span className="text-slate-500">        </span><span className="text-claw-purple">type</span><span className="text-slate-500">:</span> <span className="text-claw-green">sweep</span>{'\n'}
+                  <span className="text-slate-500">        </span><span className="text-claw-purple">interval</span><span className="text-slate-500">:</span> <span className="text-claw-orange">"30m"</span>{'\n'}
+                  <span className="text-slate-500">    - </span><span className="text-claw-purple">name</span><span className="text-slate-500">:</span> <span className="text-claw-green">sre-watchdog</span>{'\n'}
+                  <span className="text-slate-500">    - </span><span className="text-claw-purple">name</span><span className="text-slate-500">:</span> <span className="text-claw-green">platform-engineer</span>
+                </code>
+              </pre>
+            </div>
+          </div>
+
+          {/* Schedule YAML */}
+          <div>
+            <div className="text-center mb-6">
+              <h3 className="text-xl font-bold text-white">SympoziumSchedule: Recurring Tasks</h3>
+              <p className="text-sm text-slate-400 mt-1">Each persona gets its own schedule — heartbeats, sweeps, or cron</p>
+            </div>
+            <div className="rounded-2xl overflow-hidden border border-white/5 bg-surface-light/50">
+              <div className="flex items-center gap-2 px-4 py-3 bg-surface-lighter/50 border-b border-white/5">
+                <div className="w-3 h-3 rounded-full bg-claw-red/80" />
+                <div className="w-3 h-3 rounded-full bg-claw-orange/80" />
+                <div className="w-3 h-3 rounded-full bg-claw-green/80" />
+                <span className="ml-2 text-xs text-slate-500 font-mono">schedule.yaml</span>
+              </div>
+              <pre className="p-6 font-mono text-sm overflow-x-auto">
+                <code>
+                  <span className="text-claw-purple">apiVersion</span><span className="text-slate-500">:</span> <span className="text-claw-green">sympozium.ai/v1alpha1</span>{'\n'}
+                  <span className="text-claw-purple">kind</span><span className="text-slate-500">:</span> <span className="text-claw-green">SympoziumSchedule</span>{'\n'}
+                  <span className="text-claw-purple">metadata</span><span className="text-slate-500">:</span>{'\n'}
+                  <span className="text-slate-500">  </span><span className="text-claw-purple">name</span><span className="text-slate-500">:</span> <span className="text-claw-green">daily-standup</span>{'\n'}
+                  <span className="text-claw-purple">spec</span><span className="text-slate-500">:</span>{'\n'}
+                  <span className="text-slate-500">  </span><span className="text-claw-purple">instanceRef</span><span className="text-slate-500">:</span> <span className="text-claw-green">alice</span>{'\n'}
+                  <span className="text-slate-500">  </span><span className="text-claw-purple">schedule</span><span className="text-slate-500">:</span> <span className="text-claw-orange">"0 9 * * *"</span>      <span className="text-slate-600"># daily at 9am</span>{'\n'}
+                  <span className="text-slate-500">  </span><span className="text-claw-purple">type</span><span className="text-slate-500">:</span> <span className="text-claw-green">heartbeat</span>{'\n'}
+                  <span className="text-slate-500">  </span><span className="text-claw-purple">task</span><span className="text-slate-500">:</span> <span className="text-claw-green">"Review overnight alerts"</span>{'\n'}
+                  <span className="text-slate-500">  </span><span className="text-claw-purple">includeMemory</span><span className="text-slate-500">:</span> <span className="text-kube-blue">true</span>{'\n'}
+                  <span className="text-slate-500">  </span><span className="text-claw-purple">concurrencyPolicy</span><span className="text-slate-500">:</span> <span className="text-claw-green">Forbid</span>
+                </code>
+              </pre>
+            </div>
           </div>
         </div>
       </div>
