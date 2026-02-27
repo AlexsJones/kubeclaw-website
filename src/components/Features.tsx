@@ -123,15 +123,15 @@ const features = [
     ),
   },
   {
-    title: 'k9s-Style TUI',
-    subtitle: 'Interactive cluster management',
+    title: 'TUI & Web UI',
+    subtitle: 'Interactive management, your way',
     description:
-      'A full-featured terminal UI for agentic management. Browse instances, runs, schedules, channels, and skills. View logs, describe resources, submit agent runs with /run, check memory — all from your terminal.',
+      'A full-featured terminal UI and a browser-based Web UI for agentic management. Browse instances, runs, schedules, channels, and skills. View logs, describe resources, submit agent runs — from your terminal or your browser. Or skip the UI entirely with Helm and kubectl.',
     highlights: [
       '7 resource views with live updates',
-      'Inline logs & describe output',
+      'k9s-style TUI & browser Web UI',
       'Slash commands (/run, /schedule)',
-      'Keyboard-driven workflow',
+      'Or just helm install & kubectl apply',
     ],
     color: 'claw-green',
     icon: (

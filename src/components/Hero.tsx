@@ -161,6 +161,65 @@ export default function Hero() {
             The k9s-style interactive TUI — manage instances, runs, skills, and channels from your terminal
           </p>
         </div>
+
+        {/* Interact your way — TUI / Web / Helm */}
+        <div className="max-w-5xl mx-auto mt-20">
+          <h3 className="text-center text-2xl sm:text-3xl font-bold text-white mb-2">
+            Interact <span className="bg-gradient-to-r from-claw-cyan to-claw-green bg-clip-text text-transparent">your way</span>
+          </h3>
+          <p className="text-center text-slate-400 text-sm mb-10 max-w-2xl mx-auto">
+            Use the k9s-style TUI, the Web UI, or just <span className="font-mono text-claw-cyan">helm</span> and <span className="font-mono text-claw-cyan">kubectl</span> — Sympozium meets you where you are.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* TUI */}
+            <div className="group">
+              <div className="rounded-xl overflow-hidden border border-white/10 hover:border-claw-green/30 transition-colors shadow-2xl shadow-black/40">
+                <img
+                  src="/tui.png"
+                  alt="Sympozium TUI — terminal-based cluster management"
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="mt-4 flex items-center justify-center gap-2">
+                <svg className="w-5 h-5 text-claw-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" />
+                </svg>
+                <span className="text-sm font-semibold text-white">Terminal UI</span>
+                <span className="text-xs text-slate-500 font-mono ml-1">sympozium</span>
+              </div>
+            </div>
+
+            {/* Web */}
+            <div className="group">
+              <div className="rounded-xl overflow-hidden border border-white/10 hover:border-kube-blue/30 transition-colors shadow-2xl shadow-black/40">
+                <img
+                  src="/web.png"
+                  alt="Sympozium Web UI — browser-based management dashboard"
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="mt-4 flex items-center justify-center gap-2">
+                <svg className="w-5 h-5 text-kube-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                </svg>
+                <span className="text-sm font-semibold text-white">Web UI</span>
+                <span className="text-xs text-slate-500 font-mono ml-1">sympozium web</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Helm / kubectl note */}
+          <div className="mt-8 flex items-center justify-center gap-3 text-sm text-slate-500">
+            <div className="h-px w-12 bg-white/10" />
+            <span>or just use</span>
+            <span className="font-mono text-claw-orange">helm install</span>
+            <span>&</span>
+            <span className="font-mono text-claw-orange">kubectl apply</span>
+            <span>— no UI required</span>
+            <div className="h-px w-12 bg-white/10" />
+          </div>
+        </div>
       </div>
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500">
         <span className="text-xs font-medium tracking-widest uppercase">Scroll</span>
