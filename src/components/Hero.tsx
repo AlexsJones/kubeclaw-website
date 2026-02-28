@@ -148,22 +148,8 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* TUI demo */}
-        <div className="max-w-4xl mx-auto mt-12">
-          <div className="rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40">
-            <img
-              src="/demo.gif"
-              alt="Sympozium interactive TUI demo — k9s-style cluster management"
-              className="w-full h-auto"
-            />
-          </div>
-          <p className="mt-4 text-sm text-slate-500 font-mono text-center">
-            The k9s-style interactive TUI — manage instances, runs, skills, and channels from your terminal
-          </p>
-        </div>
-
         {/* Interact your way — TUI / Web / Helm */}
-        <div className="max-w-5xl mx-auto mt-20">
+        <div className="max-w-5xl mx-auto mt-12">
           <h3 className="text-center text-2xl sm:text-3xl font-bold text-white mb-2">
             Interact <span className="bg-gradient-to-r from-claw-cyan to-claw-green bg-clip-text text-transparent">your way</span>
           </h3>
@@ -176,7 +162,7 @@ export default function Hero() {
             <div className="group">
               <div className="rounded-xl overflow-hidden border border-white/10 hover:border-claw-green/30 transition-colors shadow-2xl shadow-black/40">
                 <img
-                  src="/tui.png"
+                  src="/demo.gif"
                   alt="Sympozium TUI — terminal-based cluster management"
                   className="w-full h-auto"
                 />
@@ -193,10 +179,14 @@ export default function Hero() {
             {/* Web */}
             <div className="group">
               <div className="rounded-xl overflow-hidden border border-white/10 hover:border-kube-blue/30 transition-colors shadow-2xl shadow-black/40">
-                <img
-                  src="/web.png"
-                  alt="Sympozium Web UI — browser-based management dashboard"
+                <video
+                  src="/web.webm"
                   className="w-full h-auto"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  aria-label="Sympozium Web UI — browser-based management dashboard"
                 />
               </div>
               <div className="mt-4 flex items-center justify-center gap-2">
