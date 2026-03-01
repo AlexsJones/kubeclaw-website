@@ -104,6 +104,31 @@ export default function Hero() {
           </a>
         </div>
 
+        {/* Intro video */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <div className="text-center mb-4">
+            <h3 className="text-2xl sm:text-3xl font-bold text-white">
+              Intro to <span className="bg-gradient-to-r from-kube-blue to-claw-purple bg-clip-text text-transparent">Sympozium</span>
+            </h3>
+            <p className="text-slate-400 mt-2">
+              A quick primer on the project from the creator.
+            </p>
+          </div>
+          <div className="rounded-xl overflow-hidden border border-white/10 bg-surface-light/70 backdrop-blur-xl shadow-2xl shadow-black/40">
+            <div className="aspect-video">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/ZUT60Bopa4s"
+                title="Intro to Sympozium"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+
         {/* Terminal preview */}
         <div className="max-w-2xl mx-auto">
           <div className="rounded-xl overflow-hidden border border-white/10 bg-surface-light/80 backdrop-blur-xl shadow-2xl shadow-black/40">
